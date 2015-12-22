@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		031E03721C271F8600F73187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E03711C271F8600F73187 /* AppDelegate.swift */; };
+		031E03741C271F8600F73187 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E03731C271F8600F73187 /* MasterViewController.swift */; };
+		031E03761C271F8600F73187 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E03751C271F8600F73187 /* DetailViewController.swift */; };
+		031E03791C271F8600F73187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031E03771C271F8600F73187 /* Main.storyboard */; };
+		031E037B1C271F8600F73187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031E037A1C271F8600F73187 /* Assets.xcassets */; };
+		031E037E1C271F8600F73187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031E037C1C271F8600F73187 /* LaunchScreen.storyboard */; };
+		031E03891C271F8600F73187 /* RecLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E03881C271F8600F73187 /* RecLeagueTests.swift */; };
+		031E03941C271F8600F73187 /* RecLeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031E03931C271F8600F73187 /* RecLeagueUITests.swift */; };
+		039DA92E1C272D3200B552E2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DA92D1C272D3200B552E2 /* Event.swift */; };
+		039DA9301C27356100B552E2 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039DA92F1C27356100B552E2 /* AddViewController.swift */; };
+		039DA9321C285EA800B552E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9311C285EA800B552E2 /* Parse.framework */; };
+		039DA9341C285F2000B552E2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9331C285F2000B552E2 /* AudioToolbox.framework */; };
+		039DA9361C285F3000B552E2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9351C285F3000B552E2 /* CFNetwork.framework */; };
+		039DA9381C285F3B00B552E2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9371C285F3B00B552E2 /* CoreGraphics.framework */; };
+		039DA93A1C285F4600B552E2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9391C285F4600B552E2 /* CoreLocation.framework */; };
+		039DA93C1C285F5400B552E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA93B1C285F5400B552E2 /* QuartzCore.framework */; };
+		039DA93E1C285F6300B552E2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA93D1C285F6300B552E2 /* Security.framework */; };
+		039DA9401C285F7000B552E2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA93F1C285F7000B552E2 /* StoreKit.framework */; };
+		039DA9421C285F7D00B552E2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9411C285F7D00B552E2 /* SystemConfiguration.framework */; };
+		039DA9441C285F8C00B552E2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9431C285F8C00B552E2 /* libz.tbd */; };
+		039DA9461C285FA100B552E2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9451C285FA100B552E2 /* libsqlite3.tbd */; };
+		039DA9541C2866EB00B552E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9531C2866EB00B552E2 /* Bolts.framework */; };
+		039DA9591C287B3800B552E2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9581C287B3800B552E2 /* ParseUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		031E03851C271F8600F73187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031E03661C271F8600F73187 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 031E036D1C271F8600F73187;
+			remoteInfo = RecLeague;
+		};
+		031E03901C271F8600F73187 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 031E03661C271F8600F73187 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 031E036D1C271F8600F73187;
+			remoteInfo = RecLeague;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		031E036E1C271F8600F73187 /* RecLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		031E03711C271F8600F73187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		031E03731C271F8600F73187 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		031E03751C271F8600F73187 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		031E03781C271F8600F73187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		031E037A1C271F8600F73187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		031E037D1C271F8600F73187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		031E037F1C271F8600F73187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		031E03841C271F8600F73187 /* RecLeagueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecLeagueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		031E03881C271F8600F73187 /* RecLeagueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecLeagueTests.swift; sourceTree = "<group>"; };
+		031E038A1C271F8600F73187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		031E038F1C271F8600F73187 /* RecLeagueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecLeagueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		031E03931C271F8600F73187 /* RecLeagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecLeagueUITests.swift; sourceTree = "<group>"; };
+		031E03951C271F8600F73187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		039DA92D1C272D3200B552E2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		039DA92F1C27356100B552E2 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		039DA9311C285EA800B552E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = RecLeague/Parse.framework; sourceTree = "<group>"; };
+		039DA9331C285F2000B552E2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		039DA9351C285F3000B552E2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		039DA9371C285F3B00B552E2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		039DA9391C285F4600B552E2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		039DA93B1C285F5400B552E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		039DA93D1C285F6300B552E2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		039DA93F1C285F7000B552E2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		039DA9411C285F7D00B552E2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		039DA9431C285F8C00B552E2 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		039DA9451C285FA100B552E2 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		039DA9531C2866EB00B552E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		039DA9551C286A6F00B552E2 /* RecLeague-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecLeague-Bridging-Header.h"; sourceTree = "<group>"; };
+		039DA9581C287B3800B552E2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		031E036B1C271F8600F73187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039DA9461C285FA100B552E2 /* libsqlite3.tbd in Frameworks */,
+				039DA9441C285F8C00B552E2 /* libz.tbd in Frameworks */,
+				039DA9421C285F7D00B552E2 /* SystemConfiguration.framework in Frameworks */,
+				039DA9541C2866EB00B552E2 /* Bolts.framework in Frameworks */,
+				039DA9401C285F7000B552E2 /* StoreKit.framework in Frameworks */,
+				039DA93E1C285F6300B552E2 /* Security.framework in Frameworks */,
+				039DA93C1C285F5400B552E2 /* QuartzCore.framework in Frameworks */,
+				039DA93A1C285F4600B552E2 /* CoreLocation.framework in Frameworks */,
+				039DA9381C285F3B00B552E2 /* CoreGraphics.framework in Frameworks */,
+				039DA9361C285F3000B552E2 /* CFNetwork.framework in Frameworks */,
+				039DA9341C285F2000B552E2 /* AudioToolbox.framework in Frameworks */,
+				039DA9321C285EA800B552E2 /* Parse.framework in Frameworks */,
+				039DA9591C287B3800B552E2 /* ParseUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031E03811C271F8600F73187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031E038C1C271F8600F73187 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		031E03651C271F8600F73187 = {
+			isa = PBXGroup;
+			children = (
+				039DA9471C285FA700B552E2 /* Frameworks */,
+				031E03701C271F8600F73187 /* RecLeague */,
+				031E03871C271F8600F73187 /* RecLeagueTests */,
+				031E03921C271F8600F73187 /* RecLeagueUITests */,
+				031E036F1C271F8600F73187 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		031E036F1C271F8600F73187 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				031E036E1C271F8600F73187 /* RecLeague.app */,
+				031E03841C271F8600F73187 /* RecLeagueTests.xctest */,
+				031E038F1C271F8600F73187 /* RecLeagueUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		031E03701C271F8600F73187 /* RecLeague */ = {
+			isa = PBXGroup;
+			children = (
+				031E03711C271F8600F73187 /* AppDelegate.swift */,
+				031E03731C271F8600F73187 /* MasterViewController.swift */,
+				031E03751C271F8600F73187 /* DetailViewController.swift */,
+				039DA92D1C272D3200B552E2 /* Event.swift */,
+				031E03771C271F8600F73187 /* Main.storyboard */,
+				039DA92F1C27356100B552E2 /* AddViewController.swift */,
+				031E037A1C271F8600F73187 /* Assets.xcassets */,
+				031E037C1C271F8600F73187 /* LaunchScreen.storyboard */,
+				031E037F1C271F8600F73187 /* Info.plist */,
+				039DA9551C286A6F00B552E2 /* RecLeague-Bridging-Header.h */,
+			);
+			path = RecLeague;
+			sourceTree = "<group>";
+		};
+		031E03871C271F8600F73187 /* RecLeagueTests */ = {
+			isa = PBXGroup;
+			children = (
+				031E03881C271F8600F73187 /* RecLeagueTests.swift */,
+				031E038A1C271F8600F73187 /* Info.plist */,
+			);
+			path = RecLeagueTests;
+			sourceTree = "<group>";
+		};
+		031E03921C271F8600F73187 /* RecLeagueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				031E03931C271F8600F73187 /* RecLeagueUITests.swift */,
+				031E03951C271F8600F73187 /* Info.plist */,
+			);
+			path = RecLeagueUITests;
+			sourceTree = "<group>";
+		};
+		039DA9471C285FA700B552E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				039DA9581C287B3800B552E2 /* ParseUI.framework */,
+				039DA9531C2866EB00B552E2 /* Bolts.framework */,
+				039DA9451C285FA100B552E2 /* libsqlite3.tbd */,
+				039DA9431C285F8C00B552E2 /* libz.tbd */,
+				039DA9411C285F7D00B552E2 /* SystemConfiguration.framework */,
+				039DA93F1C285F7000B552E2 /* StoreKit.framework */,
+				039DA93D1C285F6300B552E2 /* Security.framework */,
+				039DA93B1C285F5400B552E2 /* QuartzCore.framework */,
+				039DA9391C285F4600B552E2 /* CoreLocation.framework */,
+				039DA9371C285F3B00B552E2 /* CoreGraphics.framework */,
+				039DA9351C285F3000B552E2 /* CFNetwork.framework */,
+				039DA9331C285F2000B552E2 /* AudioToolbox.framework */,
+				039DA9311C285EA800B552E2 /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		031E036D1C271F8600F73187 /* RecLeague */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031E03981C271F8600F73187 /* Build configuration list for PBXNativeTarget "RecLeague" */;
+			buildPhases = (
+				031E036A1C271F8600F73187 /* Sources */,
+				031E036B1C271F8600F73187 /* Frameworks */,
+				031E036C1C271F8600F73187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RecLeague;
+			productName = RecLeague;
+			productReference = 031E036E1C271F8600F73187 /* RecLeague.app */;
+			productType = "com.apple.product-type.application";
+		};
+		031E03831C271F8600F73187 /* RecLeagueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031E039B1C271F8600F73187 /* Build configuration list for PBXNativeTarget "RecLeagueTests" */;
+			buildPhases = (
+				031E03801C271F8600F73187 /* Sources */,
+				031E03811C271F8600F73187 /* Frameworks */,
+				031E03821C271F8600F73187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				031E03861C271F8600F73187 /* PBXTargetDependency */,
+			);
+			name = RecLeagueTests;
+			productName = RecLeagueTests;
+			productReference = 031E03841C271F8600F73187 /* RecLeagueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		031E038E1C271F8600F73187 /* RecLeagueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031E039E1C271F8600F73187 /* Build configuration list for PBXNativeTarget "RecLeagueUITests" */;
+			buildPhases = (
+				031E038B1C271F8600F73187 /* Sources */,
+				031E038C1C271F8600F73187 /* Frameworks */,
+				031E038D1C271F8600F73187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				031E03911C271F8600F73187 /* PBXTargetDependency */,
+			);
+			name = RecLeagueUITests;
+			productName = RecLeagueUITests;
+			productReference = 031E038F1C271F8600F73187 /* RecLeagueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		031E03661C271F8600F73187 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Emmett Kotlikoff";
+				TargetAttributes = {
+					031E036D1C271F8600F73187 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					031E03831C271F8600F73187 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 031E036D1C271F8600F73187;
+					};
+					031E038E1C271F8600F73187 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 031E036D1C271F8600F73187;
+					};
+				};
+			};
+			buildConfigurationList = 031E03691C271F8600F73187 /* Build configuration list for PBXProject "RecLeague" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 031E03651C271F8600F73187;
+			productRefGroup = 031E036F1C271F8600F73187 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				031E036D1C271F8600F73187 /* RecLeague */,
+				031E03831C271F8600F73187 /* RecLeagueTests */,
+				031E038E1C271F8600F73187 /* RecLeagueUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		031E036C1C271F8600F73187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031E037E1C271F8600F73187 /* LaunchScreen.storyboard in Resources */,
+				031E037B1C271F8600F73187 /* Assets.xcassets in Resources */,
+				031E03791C271F8600F73187 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031E03821C271F8600F73187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031E038D1C271F8600F73187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		031E036A1C271F8600F73187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				039DA9301C27356100B552E2 /* AddViewController.swift in Sources */,
+				031E03761C271F8600F73187 /* DetailViewController.swift in Sources */,
+				031E03741C271F8600F73187 /* MasterViewController.swift in Sources */,
+				031E03721C271F8600F73187 /* AppDelegate.swift in Sources */,
+				039DA92E1C272D3200B552E2 /* Event.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031E03801C271F8600F73187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031E03891C271F8600F73187 /* RecLeagueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031E038B1C271F8600F73187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031E03941C271F8600F73187 /* RecLeagueUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		031E03861C271F8600F73187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 031E036D1C271F8600F73187 /* RecLeague */;
+			targetProxy = 031E03851C271F8600F73187 /* PBXContainerItemProxy */;
+		};
+		031E03911C271F8600F73187 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 031E036D1C271F8600F73187 /* RecLeague */;
+			targetProxy = 031E03901C271F8600F73187 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		031E03771C271F8600F73187 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				031E03781C271F8600F73187 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		031E037C1C271F8600F73187 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				031E037D1C271F8600F73187 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		031E03961C271F8600F73187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		031E03971C271F8600F73187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		031E03991C271F8600F73187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RecLeague",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RecLeague/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = E.RecLeague;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecLeague/RecLeague-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		031E039A1C271F8600F73187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RecLeague",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = RecLeague/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = E.RecLeague;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecLeague/RecLeague-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		031E039C1C271F8600F73187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RecLeagueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = E.RecLeagueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecLeague.app/RecLeague";
+			};
+			name = Debug;
+		};
+		031E039D1C271F8600F73187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RecLeagueTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = E.RecLeagueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecLeague.app/RecLeague";
+			};
+			name = Release;
+		};
+		031E039F1C271F8600F73187 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RecLeagueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = E.RecLeagueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RecLeague;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		031E03A01C271F8600F73187 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RecLeagueUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = E.RecLeagueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RecLeague;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		031E03691C271F8600F73187 /* Build configuration list for PBXProject "RecLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031E03961C271F8600F73187 /* Debug */,
+				031E03971C271F8600F73187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031E03981C271F8600F73187 /* Build configuration list for PBXNativeTarget "RecLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031E03991C271F8600F73187 /* Debug */,
+				031E039A1C271F8600F73187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031E039B1C271F8600F73187 /* Build configuration list for PBXNativeTarget "RecLeagueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031E039C1C271F8600F73187 /* Debug */,
+				031E039D1C271F8600F73187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031E039E1C271F8600F73187 /* Build configuration list for PBXNativeTarget "RecLeagueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031E039F1C271F8600F73187 /* Debug */,
+				031E03A01C271F8600F73187 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 031E03661C271F8600F73187 /* Project object */;
+}
