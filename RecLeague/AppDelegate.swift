@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import Bolts
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -17,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // [Optional] Power your app with Local Datastore. For more info, go to
+        // Google Maps
+        GMSServices.provideAPIKey("AIzaSyAw09JA_N1dLfdpnfOgXNXNInH3rePlv4o")
+        
+        // Power your app with Local Datastore. For more info, go to
         // https://parse.com/docs/ios/guide#local-datastore
         Parse.enableLocalDatastore()
         
@@ -25,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         Parse.setApplicationId("FCUFEX8Pqc0v36ou0k2ewpFOIErujmnCL9xjZsiA",
             clientKey: "lcqpbDFpXpXDx5QdI9VDmpzyXxDqp9TBHO1j82xb")
         
-        // [Optional] Track statistics around application opens.
+        // Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
         // Override point for customization after application launch.
@@ -63,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool {
         guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
         guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-        if topAsDetailController.detailItem == nil {
+        if topAsDetailController.event == nil {
             // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
             return true
         }

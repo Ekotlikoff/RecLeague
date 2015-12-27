@@ -15,14 +15,17 @@ struct Event {
     }
     
     var name : String
+    var address : String
+    var date : NSDate
     var skill : SkillLevel
     var desiredAttendees : Int
     var minimumAttendees : Int
     var currentAttendees : Int
-    // TODO time/location
     
-    init(name : String, skill : SkillLevel, desired : Int, minimum : Int, current : Int) {
+    init(name : String, address : String, date : NSDate, skill : SkillLevel, desired : Int, minimum : Int, current : Int) {
         self.name = name
+        self.address = address
+        self.date = date
         self.skill = skill
         self.desiredAttendees = desired
         self.minimumAttendees = minimum

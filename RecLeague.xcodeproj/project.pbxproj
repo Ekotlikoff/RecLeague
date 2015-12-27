@@ -30,6 +30,8 @@
 		039DA9461C285FA100B552E2 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9451C285FA100B552E2 /* libsqlite3.tbd */; };
 		039DA9541C2866EB00B552E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9531C2866EB00B552E2 /* Bolts.framework */; };
 		039DA9591C287B3800B552E2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039DA9581C287B3800B552E2 /* ParseUI.framework */; };
+		03B659A01C2C496800F88053 /* DeviceUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 03B6599F1C2C496800F88053 /* DeviceUID.m */; };
+		9A89AF7F45DD918BCE997D18 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 349B4DA35124E309BE5F0756 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +67,7 @@
 		031E03931C271F8600F73187 /* RecLeagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecLeagueUITests.swift; sourceTree = "<group>"; };
 		031E03951C271F8600F73187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		039DA92D1C272D3200B552E2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		039DA92F1C27356100B552E2 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		039DA92F1C27356100B552E2 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		039DA9311C285EA800B552E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = RecLeague/Parse.framework; sourceTree = "<group>"; };
 		039DA9331C285F2000B552E2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		039DA9351C285F3000B552E2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -80,6 +82,12 @@
 		039DA9531C2866EB00B552E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		039DA9551C286A6F00B552E2 /* RecLeague-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecLeague-Bridging-Header.h"; sourceTree = "<group>"; };
 		039DA9581C287B3800B552E2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		03B6599F1C2C496800F88053 /* DeviceUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceUID.m; sourceTree = "<group>"; };
+		03B659A11C2C4BCC00F88053 /* DeviceUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceUID.h; sourceTree = "<group>"; };
+		03BDFA331C2F531B00B5EFBF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		306ECF733B9D88225B5E2362 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		33E163D924663C65216908A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		349B4DA35124E309BE5F0756 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,7 @@
 				039DA9341C285F2000B552E2 /* AudioToolbox.framework in Frameworks */,
 				039DA9321C285EA800B552E2 /* Parse.framework in Frameworks */,
 				039DA9591C287B3800B552E2 /* ParseUI.framework in Frameworks */,
+				9A89AF7F45DD918BCE997D18 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,11 +132,13 @@
 		031E03651C271F8600F73187 = {
 			isa = PBXGroup;
 			children = (
+				03BDFA331C2F531B00B5EFBF /* Podfile */,
 				039DA9471C285FA700B552E2 /* Frameworks */,
 				031E03701C271F8600F73187 /* RecLeague */,
 				031E03871C271F8600F73187 /* RecLeagueTests */,
 				031E03921C271F8600F73187 /* RecLeagueUITests */,
 				031E036F1C271F8600F73187 /* Products */,
+				090E56F32072C72860C016F2 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +190,8 @@
 		039DA9471C285FA700B552E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03B6599F1C2C496800F88053 /* DeviceUID.m */,
+				03B659A11C2C4BCC00F88053 /* DeviceUID.h */,
 				039DA9581C287B3800B552E2 /* ParseUI.framework */,
 				039DA9531C2866EB00B552E2 /* Bolts.framework */,
 				039DA9451C285FA100B552E2 /* libsqlite3.tbd */,
@@ -192,8 +205,18 @@
 				039DA9351C285F3000B552E2 /* CFNetwork.framework */,
 				039DA9331C285F2000B552E2 /* AudioToolbox.framework */,
 				039DA9311C285EA800B552E2 /* Parse.framework */,
+				349B4DA35124E309BE5F0756 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		090E56F32072C72860C016F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33E163D924663C65216908A6 /* Pods.debug.xcconfig */,
+				306ECF733B9D88225B5E2362 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 031E03981C271F8600F73187 /* Build configuration list for PBXNativeTarget "RecLeague" */;
 			buildPhases = (
+				600133D415A36D4702A1A3CE /* Check Pods Manifest.lock */,
 				031E036A1C271F8600F73187 /* Sources */,
 				031E036B1C271F8600F73187 /* Frameworks */,
 				031E036C1C271F8600F73187 /* Resources */,
+				801926623615FA8C9A0A9ABD /* Embed Pods Frameworks */,
+				B1B7873951DB924FE2D4A785 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +290,7 @@
 				TargetAttributes = {
 					031E036D1C271F8600F73187 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = BJ293T3427;
 					};
 					031E03831C271F8600F73187 = {
 						CreatedOnToolsVersion = 7.2;
@@ -322,6 +349,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		600133D415A36D4702A1A3CE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		801926623615FA8C9A0A9ABD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1B7873951DB924FE2D4A785 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		031E036A1C271F8600F73187 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -329,6 +404,7 @@
 			files = (
 				039DA9301C27356100B552E2 /* AddViewController.swift in Sources */,
 				031E03761C271F8600F73187 /* DetailViewController.swift in Sources */,
+				03B659A01C2C496800F88053 /* DeviceUID.m in Sources */,
 				031E03741C271F8600F73187 /* MasterViewController.swift in Sources */,
 				031E03721C271F8600F73187 /* AppDelegate.swift in Sources */,
 				039DA92E1C272D3200B552E2 /* Event.swift in Sources */,
@@ -471,9 +547,12 @@
 		};
 		031E03991C271F8600F73187 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E163D924663C65216908A6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RecLeague",
@@ -483,6 +562,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = E.RecLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RecLeague/RecLeague-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -490,9 +570,12 @@
 		};
 		031E039A1C271F8600F73187 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 306ECF733B9D88225B5E2362 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RecLeague",
@@ -502,6 +585,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = E.RecLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "RecLeague/RecLeague-Bridging-Header.h";
 			};
 			name = Release;
