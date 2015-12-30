@@ -86,8 +86,12 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func addressTapped(sender: AnyObject) {
-        let targetURL = NSURL(string: "http://maps.apple.com/?q=" + (location.titleLabel?.text!)!)!
-        UIApplication.sharedApplication().openURL(targetURL)
+        print((location.titleLabel?.text!)!)
+        if let targetURL = NSURL(string: "http://maps.apple.com/?q=" + (location.titleLabel?.text!)!) {
+            UIApplication.sharedApplication().openURL(targetURL)
+        } else if let targetURL = NSURL(string: "http://maps.apple.com/?q=" + ((event?.valueForKey("coordinates"))! as! String)){
+            UIApplication.sharedApplication().openURL(targetURL)
+        }
     }
     
     override func viewDidLoad() {

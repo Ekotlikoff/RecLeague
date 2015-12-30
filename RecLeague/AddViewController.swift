@@ -16,13 +16,13 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
     var delegate: MasterViewController?
     var event: Event?
     var placePicker: GMSPlacePicker?
-    var addressID: String?
     var latitude: CLLocationDegrees? = nil
     var longitude: CLLocationDegrees? = nil
     let manager = CLLocationManager()
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var address: UITextField!
+    var addressCoordinates: String?
     @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var skillLevel: UISegmentedControl!
     @IBOutlet weak var desired: UITextField!
@@ -66,10 +66,8 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
             if let place = place {
                 if let text = place.formattedAddress {
                     self.address.text = text.componentsSeparatedByString(", ").joinWithSeparator("\n")
-                } else {
-                    self.address.text = place.coordinate.latitude.description + "," + place.coordinate.longitude.description
                 }
-                self.addressID = place.placeID
+                self.addressCoordinates = place.coordinate.latitude.description + "," + place.coordinate.longitude.description
             }
         })
     }
@@ -78,6 +76,8 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
         let obj = PFObject(className: delegate!.className)
         obj.setObject(event.name, forKey: "name")
         obj.setObject(event.address, forKey: "address")
+        obj.setObject(self.addressCoordinates!, forKey: "coordinates")
+        obj.setObject(addressCoordinates!, forKey: "addressCoordinates")
         obj.setObject(event.date, forKey: "date")
         obj.setObject(event.skill.rawValue, forKey: "skill")
         obj.setObject(event.desiredAttendees, forKey: "desiredAttendees")
@@ -167,6 +167,7 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
             let style = UIAlertControllerStyle.init(rawValue: 0)!
             let alert = UIAlertController.init(title: "Forget to save?", message: "Cancel or go back.", preferredStyle: style)
             let action = UIAlertAction.init(title: "Back", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+                self.delegate?.navigationController?.navigationBar.userInteractionEnabled = false
                 self.delegate?.popController()
             })
             let cancel = UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: { (UIAlertAction) -> Void in
@@ -175,6 +176,7 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
             alert.addAction(cancel)
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
+            self.delegate?.navigationController?.navigationBar.userInteractionEnabled = false
             self.delegate?.popController()
         }
     }

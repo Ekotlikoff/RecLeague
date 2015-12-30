@@ -214,7 +214,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RGK-OY-cCg">
-                                <rect key="frame" x="20" y="64" width="374" height="672"/>
+                                <rect key="frame" x="20" y="69" width="374" height="667"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Event name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sdG-mJ-61O">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -222,13 +222,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dgb-ll-4bh">
-                                        <rect key="frame" x="27" y="65.5" width="320" height="216"/>
+                                        <rect key="frame" x="27" y="64.5" width="320" height="216"/>
                                         <date key="date" timeIntervalSinceReferenceDate="472609123.12024999">
                                             <!--2015-12-24 00:18:43 +0000-->
                                         </date>
                                     </datePicker>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mge-Rc-NEF">
-                                        <rect key="frame" x="0.0" y="317" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="315.5" width="374" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                         <connections>
@@ -236,7 +236,7 @@
                                         </connections>
                                     </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XWs-Nr-LQl">
-                                        <rect key="frame" x="52.5" y="382.5" width="269" height="29"/>
+                                        <rect key="frame" x="52.5" y="380" width="269" height="29"/>
                                         <segments>
                                             <segment title="Beginners"/>
                                             <segment title="All Welcome"/>
@@ -244,22 +244,22 @@
                                         </segments>
                                     </segmentedControl>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many people should come?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWB-ih-0Uc">
-                                        <rect key="frame" x="0.0" y="445.5" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="443" width="374" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="200" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minimum number of people?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="83v-uv-Fmd">
-                                        <rect key="frame" x="0.0" y="511" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="507.5" width="374" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="200" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current number of people?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3X6-Aw-PjG">
-                                        <rect key="frame" x="0.0" y="576.5" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="572.5" width="374" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBX-90-Cbw">
-                                        <rect key="frame" x="170" y="642" width="34" height="30"/>
+                                        <rect key="frame" x="170" y="637" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
                                             <action selector="saveEvent:" destination="hqA-ja-kRF" eventType="touchUpInside" id="Aby-ih-4pc"/>
@@ -287,7 +287,7 @@
                                     <constraint firstItem="gWB-ih-0Uc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XWs-Nr-LQl" secondAttribute="bottom" constant="-5" id="opp-sC-2ZS"/>
                                     <constraint firstItem="Mge-Rc-NEF" firstAttribute="top" secondItem="dgb-ll-4bh" secondAttribute="bottom" constant="8" symbolic="YES" id="r8K-hs-edk"/>
                                     <constraint firstAttribute="trailing" secondItem="83v-uv-Fmd" secondAttribute="trailing" id="sAU-Ju-8Sy"/>
-                                    <constraint firstItem="sdG-mJ-61O" firstAttribute="top" secondItem="RGK-OY-cCg" secondAttribute="top" constant="20" symbolic="YES" id="sxY-2Z-aHm"/>
+                                    <constraint firstItem="sdG-mJ-61O" firstAttribute="top" secondItem="RGK-OY-cCg" secondAttribute="top" id="sxY-2Z-aHm"/>
                                     <constraint firstItem="dgb-ll-4bh" firstAttribute="top" secondItem="sdG-mJ-61O" secondAttribute="bottom" constant="8" symbolic="YES" id="yg3-3i-7wz"/>
                                 </constraints>
                                 <variation key="default">
@@ -312,10 +312,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="RGK-OY-cCg" secondAttribute="trailing" id="Mnj-y4-Qmq"/>
+                            <constraint firstItem="RGK-OY-cCg" firstAttribute="top" secondItem="rvv-a2-ZUt" secondAttribute="bottom" constant="5" id="UUu-iK-937"/>
                             <constraint firstItem="CAK-mc-v7K" firstAttribute="top" secondItem="RGK-OY-cCg" secondAttribute="bottom" id="Uwx-VB-KxB"/>
                             <constraint firstItem="RGK-OY-cCg" firstAttribute="top" secondItem="rvv-a2-ZUt" secondAttribute="bottom" id="oA2-wA-7QQ"/>
-                            <constraint firstItem="RGK-OY-cCg" firstAttribute="leading" secondItem="gIs-Kf-pHx" secondAttribute="leadingMargin" priority="750" id="yw3-pW-DxT"/>
+                            <constraint firstItem="RGK-OY-cCg" firstAttribute="leading" secondItem="gIs-Kf-pHx" secondAttribute="leadingMargin" id="yw3-pW-DxT"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="oA2-wA-7QQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="uMg-0F-kL7"/>
                     <keyCommands/>
@@ -385,7 +391,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" id="Zdf-7t-Un8"/>
                     <connections>
                         <segue destination="KCq-MS-e2u" kind="show" identifier="addEvent" action="showDetailViewController:sender:" id="coA-7H-dlC"/>
                     </connections>
