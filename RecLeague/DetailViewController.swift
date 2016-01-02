@@ -12,11 +12,13 @@ import GoogleMaps
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var location: UIButton!
-    @IBOutlet weak var desired: UILabel!
-    @IBOutlet weak var minimum: UILabel!
-    @IBOutlet weak var current: UILabel!
+    @IBOutlet weak var desiredLabel: UILabel!
+    @IBOutlet weak var maximumLabel: UILabel!
+    @IBOutlet weak var maximumTextLabel: UILabel!
+    @IBOutlet weak var currentLabel: UILabel!
+    @IBOutlet weak var skillLabel: UILabel!
     @IBOutlet weak var attending: UISwitch!
     
     var tapGestureRecognizer: UITapGestureRecognizer?
@@ -34,7 +36,7 @@ class DetailViewController: UIViewController {
                 // increment attending
                 let newAttending = Int(event.valueForKey("currentAttendees") as! NSNumber) + 1
                 event.setObject(newAttending, forKey: "currentAttendees")
-                current.text = String(newAttending)
+                currentLabel.text = String(newAttending)
                 // add uid to array
                 event.addObject(DeviceUID.uid(), forKey: "attendingIDs")
                 event.saveInBackground()
@@ -45,7 +47,7 @@ class DetailViewController: UIViewController {
                 // decrement attending
                 let newAttending = Int(event.valueForKey("currentAttendees") as! NSNumber) - 1
                 event.setObject(newAttending, forKey: "currentAttendees")
-                current.text = String(newAttending)
+                currentLabel.text = String(newAttending)
                 // remove uid to array
                 let newArr = event.valueForKey("attendingIDs")
                 newArr?.removeObject(DeviceUID.uid())
@@ -65,23 +67,45 @@ class DetailViewController: UIViewController {
             if let location = self.location {             location.setTitle(String(event.valueForKey("address")!), forState: UIControlState.Normal)
                 
             }
-            if let date = self.date {
-                date.text = String(event.valueForKey("date")!)
+            if let dateLabel = self.dateLabel {
+                dateLabel.text = String(event.valueForKey("date")!)
             }
-            if let desired = self.desired {
-                desired.text = String(event.valueForKey("desiredAttendees")!)
+            if let desiredLabel = self.desiredLabel {
+                desiredLabel.text = String(event.valueForKey("desiredAttendees")!)
             }
-            if let minimum = self.minimum {
-                minimum.text = String(event.valueForKey("minimumAttendees")!)
+            if let maximumLabel = self.maximumLabel {
+                if let maximum = event.valueForKey("maximumAttendees") {
+                    maximumLabel.text = String(maximum)
+                } else {
+                    maximumLabel.removeFromSuperview()
+                    maximumTextLabel.removeFromSuperview()
+                }
             }
-            if let current = self.current {
-                current.text = String(event.valueForKey("currentAttendees")!)
+            if let currentLabel = self.currentLabel {
+                currentLabel.text = String(event.valueForKey("currentAttendees")!)
+            }
+            if let skillLabel = self.skillLabel {
+                skillLabel.text = skillToString(Int(String(event.valueForKey("skill")!))!)
             }
             if let attending = self.attending {
                 let IDs = event.valueForKey("attendingIDs")!
                 let bool = IDs.containsObject(DeviceUID.uid())
                 attending.setOn(bool, animated: false)
             }
+        }
+    }
+    
+    
+    private func skillToString(skill : Int) -> String {
+        switch (skill) {
+        case 0:
+            return "Beginners"
+        case 1:
+            return "All welcome"
+        case 2:
+            return "Competitive"
+        default:
+            return ""
         }
     }
     

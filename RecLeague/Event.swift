@@ -19,16 +19,18 @@ struct Event {
     var date : NSDate
     var skill : SkillLevel
     var desiredAttendees : Int
-    var minimumAttendees : Int
+    var exact : Bool
+    var maximumAttendees : Int?
     var currentAttendees : Int
     
-    init(name : String, address : String, date : NSDate, skill : SkillLevel, desired : Int, minimum : Int, current : Int) {
+    init(name : String, address : String, date : NSDate, skill : SkillLevel, desired : Int, exact : Bool, maximum : Int?, current : Int) {
         self.name = name
         self.address = address
         self.date = date
         self.skill = skill
         self.desiredAttendees = desired
-        self.minimumAttendees = minimum
+        self.exact = exact
+        self.maximumAttendees = maximum
         self.currentAttendees = current
     }
 }

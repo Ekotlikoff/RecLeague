@@ -26,19 +26,57 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
     @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var skillLevel: UISegmentedControl!
     @IBOutlet weak var desired: UITextField!
-    @IBOutlet weak var minimum: UITextField!
-    @IBOutlet weak var current: UITextField!
+    @IBOutlet weak var exact: UISwitch!
+    @IBOutlet weak var maximum: UITextField!
+    
+    @IBAction func exactChanged(sender: UISwitch) {
+        if (sender.on) {
+            maximum.text = nil
+        }
+        maximum.userInteractionEnabled = !sender.on
+    }
     
     @IBAction func saveEvent(sender: UIButton) {
         if let name = name.text,
             address = address.text,
             skill = Event.SkillLevel(rawValue: skillLevel.selectedSegmentIndex),
-            desired = Int(desired.text!),
-            minimum = Int(minimum.text!),
-            current = Int(current.text!) {
-                event = Event(name: name, address: address, date: date.date, skill: skill, desired: desired, minimum: minimum, current: current)
+            desired = Int(desired.text!) {
+                var event : Event?
+                if let maximum = Int(maximum.text!) {
+                    event = Event(name: name, address: address, date: date.date, skill: skill, desired: desired, exact: exact.on, maximum: maximum, current: 1)
+                } else {
+                    event = Event(name: name, address: address, date: date.date, skill: skill, desired: desired, exact: exact.on, maximum: nil, current: 1)
+                }
                 save(event!)
                 delegate!.popController()
+        }
+    }
+    
+    private func save(event: Event) {
+        let obj = PFObject(className: delegate!.className)
+        obj.setObject(event.name, forKey: "name")
+        obj.setObject(event.address, forKey: "address")
+        if let coordinates = self.addressCoordinates {
+            obj.setObject(self.addressCoordinates!, forKey: "coordinates")
+        }
+        obj.setObject(addressCoordinates!, forKey: "addressCoordinates")
+        obj.setObject(event.date, forKey: "date")
+        obj.setObject(event.skill.rawValue, forKey: "skill")
+        obj.setObject(event.desiredAttendees, forKey: "desiredAttendees")
+        obj.setObject(event.exact, forKey: "exact")
+        if let maximum = event.maximumAttendees {
+            obj.setObject(maximum, forKey: "maximumAttendees")
+        }
+        obj.setObject(event.currentAttendees, forKey: "currentAttendees")
+        let UID : String = DeviceUID.uid()
+        obj.addObject(UID, forKey: "attendingIDs")
+        obj.saveInBackgroundWithBlock {
+            (success, error) in
+            if success == true {
+                print("Event created with ID: \(obj.objectId)")
+            } else {
+                print(error)
+            }
         }
     }
     
@@ -70,29 +108,6 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
                 self.addressCoordinates = place.coordinate.latitude.description + "," + place.coordinate.longitude.description
             }
         })
-    }
-    
-    private func save(event: Event) {
-        let obj = PFObject(className: delegate!.className)
-        obj.setObject(event.name, forKey: "name")
-        obj.setObject(event.address, forKey: "address")
-        obj.setObject(self.addressCoordinates!, forKey: "coordinates")
-        obj.setObject(addressCoordinates!, forKey: "addressCoordinates")
-        obj.setObject(event.date, forKey: "date")
-        obj.setObject(event.skill.rawValue, forKey: "skill")
-        obj.setObject(event.desiredAttendees, forKey: "desiredAttendees")
-        obj.setObject(event.minimumAttendees, forKey: "minimumAttendees")
-        obj.setObject(event.currentAttendees, forKey: "currentAttendees")
-        let UID : String = DeviceUID.uid()
-        obj.addObject(UID, forKey: "attendingIDs")
-        obj.saveInBackgroundWithBlock {
-            (success, error) in
-            if success == true {
-                print("Event created with ID: \(obj.objectId)")
-            } else {
-                print(error)
-            }
-        }
     }
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?){
@@ -139,8 +154,7 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
         name.delegate = self
         address.delegate = self
         desired.delegate = self
-        minimum.delegate = self
-        current.delegate = self
+        maximum.delegate = self
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace,
@@ -149,8 +163,7 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
             target: view, action: Selector("endEditing:"))
         keyboardToolbar.items = [flexBarButton, doneBarButton]
         desired.inputAccessoryView = keyboardToolbar
-        minimum.inputAccessoryView = keyboardToolbar
-        current.inputAccessoryView = keyboardToolbar
+        maximum.inputAccessoryView = keyboardToolbar
     
         self.navigationController!.setNavigationBarHidden(false, animated:true)
         let myBackButton:UIButton = UIButton(type: UIButtonType.Custom)
@@ -163,7 +176,7 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UITextFiel
     }
     
     func backPressed(sender: AnyObject) {
-        if (name.text != "" || address.text != "" || current.text != "") {
+        if (name.text != "" || address.text != "") {
             let style = UIAlertControllerStyle.init(rawValue: 0)!
             let alert = UIAlertController.init(title: "Forget to save?", message: "Cancel or go back.", preferredStyle: style)
             let action = UIAlertAction.init(title: "Back", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
