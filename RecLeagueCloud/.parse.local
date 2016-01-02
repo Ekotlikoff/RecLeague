@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "RecLeague": {
+      "applicationId": "FCUFEX8Pqc0v36ou0k2ewpFOIErujmnCL9xjZsiA"
+    },
+    "_default": {
+      "link": "RecLeague"
+    }
+  }
+}
